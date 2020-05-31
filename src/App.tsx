@@ -13,10 +13,10 @@ function App() {
               patronymic={fullName.patronymic}/>
       
 
-      <Message userName={messageDate.userName} 
-               userPhoto={messageDate.photo} 
-               message={messageDate.message} 
-               time={messageDate.time()}/>
+      <Message userName={messageData.userName} 
+               userPhoto={messageData.photo} 
+               message={messageData.message} 
+               time={messageData.time()}/>
       
     </div>
   );
@@ -24,7 +24,7 @@ function App() {
 
 export default App;
 
-//date
+//data
 
 const fullName = {
   surname: 'Zyabsky',
@@ -32,7 +32,7 @@ const fullName = {
   patronymic: 'Ivanovich',
 }
 
-let messageDate = {
+let messageData = {
   id: 1,
   userName: 'Elliot',
   photo: 'https://i2.wp.com/itc.ua/wp-content/uploads/2017/12/dims-11.jpg?fit=1524%2C1080&quality=100&strip=all&ssl=1',
