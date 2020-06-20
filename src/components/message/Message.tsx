@@ -1,6 +1,7 @@
 import React from "react"
 import style from "./Message.module.css"
 
+
 type PropsMessageType = {
     userName: string,
     userPhoto: string,

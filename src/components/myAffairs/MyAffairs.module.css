@@ -1,0 +1,29 @@
+.myAffairs {
+    background-color: #A4BDBA;
+    max-width: 400px;
+    min-width: 230px;
+    padding: 15px;
+    border-radius: 25px 25px 25px 25px;
+    margin-bottom: 100px;
+}
+.affair {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.affair span:first-child {
+    margin: 0 auto 0 0;
+}
+.affair button {
+    margin-left: 10px;
+}
+.sortingBtns {
+    display: flex;
+    justify-content: space-around;
+}
+button {
+    cursor: pointer;
+}

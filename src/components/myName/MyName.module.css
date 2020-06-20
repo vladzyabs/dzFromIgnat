@@ -1,0 +1,21 @@
+.MyName {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 20px;
+    background: #a4bdba;
+    border-radius: 25px;
+    transition: 0.3s;
+    color: #111;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+.MyName:hover {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+.MyName > span {
+    margin-right: 5px;
+}
+.MyName > span:last-child {
+    margin-right: 0;
+}
