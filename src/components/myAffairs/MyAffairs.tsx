@@ -15,18 +15,21 @@ function MyAffairs(props: PropsMyAffairsType) {
         const onClickRemove = () => props.removeAffair(affair.id);
 
         return (
-            <div key={affair.id} className={style.affair}>
+            <li key={affair.id} className={style.affair}>
                 <span>{affair.title}</span>
                 <span>{affair.priority}</span>
                 <button onClick={ onClickRemove }>X</button>
-            </div>
+            </li>
         )
     } );
 
     return (
         <div className={style.myAffairs}>
+            <h2>dz : 2</h2>
 
-            { returnAffairs }
+            <ul>
+                { returnAffairs }
+            </ul>
 
             <div className={style.sortingBtns}>
                 <button onClick={ () => {props.changeFilter("all")} }>all</button>

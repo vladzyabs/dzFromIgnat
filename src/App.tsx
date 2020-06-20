@@ -5,6 +5,7 @@ import Message from "./components/message/Message"
 import MyAffairs from "./components/myAffairs/MyAffairs";
 import {AffairsType, ChangeFilterType, FilterValueType, RemoveAffairType} from "./types";
 import {v1} from "uuid";
+import HellowName from "./components/helloName/HelloName";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
         {id: v1(), title: 'Angular', priority: 'low'},
     ]);
     const removeAffair: RemoveAffairType = (id) =>
-        setAffairs(prev => prev.filter(affair => affair.id !==id));
+        setAffairs(prev => prev.filter(affair => affair.id !== id));
 
     let affairsWithFilter: AffairsType = affairs;
 
@@ -49,7 +50,9 @@ function App() {
             <MyName surname={fullName.surname}
                     name={fullName.name}
                     patronymic={fullName.patronymic}/>
-                    
+
+            <HellowName/>
+
             <MyAffairs affairs={affairsWithFilter}
                        removeAffair={removeAffair}
                        changeFilter={changeFilter}/>
@@ -80,9 +83,11 @@ let messageData = {
     message: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.',
     time: function () {
         let date = new Date();
+
         function checkTime(i: any) {
             return (i < 10) ? i = "0" + i : i
         }
+
         return `${checkTime(date.getHours())}:${checkTime(date.getMinutes())}`
     },
 };

@@ -1,3 +1,6 @@
+
+
+// ---------------------------------
 export type AffairType = {
     id: string,
     title: string,
