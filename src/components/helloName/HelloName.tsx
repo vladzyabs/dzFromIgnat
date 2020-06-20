@@ -4,7 +4,7 @@ import {v1} from "uuid";
 
 type PropsHellowNameType = {}
 
-function HellowName(props: PropsHellowNameType) {
+function HelloName(props: PropsHellowNameType) {
 
     type InputNameType = string
     type NameType = { id: string, name: InputNameType }
@@ -26,7 +26,7 @@ function HellowName(props: PropsHellowNameType) {
             alert(`Hello ${inputName}`);
             let newName = {id: v1(), name: inputName};
             setNames(prev => [newName, ...prev]);
-            setInputName('')
+            setInputName('');
         } else {
             setEmptyField(true)
         }
@@ -48,4 +48,4 @@ function HellowName(props: PropsHellowNameType) {
     )
 }
 
-export default HellowName
+export default HelloName

@@ -5,7 +5,7 @@ import Message from "./components/message/Message"
 import MyAffairs from "./components/myAffairs/MyAffairs";
 import {AffairsType, ChangeFilterType, FilterValueType, RemoveAffairType} from "./types";
 import {v1} from "uuid";
-import HellowName from "./components/helloName/HelloName";
+import HelloName from "./components/helloName/HelloName";
 
 function App() {
 
@@ -51,7 +51,7 @@ function App() {
                     name={fullName.name}
                     patronymic={fullName.patronymic}/>
 
-            <HellowName/>
+            <HelloName/>
 
             <MyAffairs affairs={affairsWithFilter}
                        removeAffair={removeAffair}
