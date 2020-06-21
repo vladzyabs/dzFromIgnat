@@ -22,7 +22,7 @@ function HelloName(props: PropsHellowNameType) {
     const onKeyPressInputName = (e: KeyboardEvent<HTMLInputElement>) => e.charCode === 13 && onClickBtnAdd();
 
     const onClickBtnAdd = () => {
-        if (inputName) {
+        if (inputName.trim()    ) {
             alert(`Hello ${inputName}`);
             let newName = {id: v1(), name: inputName};
             setNames(prev => [newName, ...prev]);
@@ -41,7 +41,7 @@ function HelloName(props: PropsHellowNameType) {
                        onChange={onChangeInputName}
                        onKeyPress={onKeyPressInputName}
                        className={emptyField ? style.error : ''}/>
-                <button onClick={onClickBtnAdd} disabled={!inputName}>Set</button>
+                <button onClick={onClickBtnAdd} disabled={!inputName.trim()}>Set</button>
             </div>
             <span>Amount тnames: {names.length}</span>
         </div>
