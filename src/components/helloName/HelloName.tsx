@@ -1,6 +1,10 @@
-import React, {ChangeEvent, KeyboardEvent, useState} from "react";
-import style from "./HelloName.module.css"
+import React, {ChangeEvent, useState} from "react";
 import {v1} from "uuid";
+import Button from "../common/ButtonNya";
+import Input from "../common/InputNya";
+
+import style from "./HelloName.module.scss"
+import sendIcon from "../../assets/img/send.png"
 
 type PropsHellowNameType = {}
 
@@ -19,7 +23,7 @@ function HelloName(props: PropsHellowNameType) {
         setEmptyField(false)
     };
 
-    const onKeyPressInputName = (e: KeyboardEvent<HTMLInputElement>) => e.charCode === 13 && onClickBtnAdd();
+    const onKeyPressInputName = () => onClickBtnAdd();
 
     const onClickBtnAdd = () => {
         if (inputName.trim()) {
@@ -33,15 +37,18 @@ function HelloName(props: PropsHellowNameType) {
     };
 
     return (
-        <div className={style.hellowName}>
+        <div className={style.helloName}>
             <h2>dz : 3</h2>
-            <div>
-                <input type="text"
+            <div className={style.helloNameField}>
+                <Input type="text"
                        value={inputName}
                        onChange={onChangeInputName}
-                       onKeyPress={onKeyPressInputName}
-                       className={emptyField ? style.error : ''}/>
-                <button onClick={onClickBtnAdd} disabled={!inputName.trim()}>Set</button>
+                       title={'Enter name'}
+                       error={emptyField ? 'You did not enter a name' : ''}
+                       onEnter={() => onKeyPressInputName()}/>
+                <Button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
+                    <img src={sendIcon} alt="bin"/>
+                </Button>
             </div>
             <span>Names amount : {names.length}</span>
         </div>

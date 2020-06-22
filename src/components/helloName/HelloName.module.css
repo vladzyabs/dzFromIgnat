@@ -1,22 +1,23 @@
-.hellowName {
-    background-color: #A4BDBA;
-    max-width: 400px;
-    min-width: 230px;
-    padding: 15px;
-    border-radius: 25px 25px 25px 25px;
-    margin-bottom: 100px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.helloName {
+  background-color: #A4BDBA;
+  max-width: 400px;
+  min-width: 230px;
+  padding: 15px;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.helloName .helloNameField {
+  display: flex;
+  align-items: center;
+}
+.helloName .helloNameField input {
+  margin-right: 5px;
+}
+.helloName .helloNameField button img {
+  width: 16px;
 }
 
-input, button {
-    outline: none;
-    border: 1px solid #111;
-}
-
-.error {
-    border-color: red;
-}
-
+/*# sourceMappingURL=HelloName.module.css.map */
