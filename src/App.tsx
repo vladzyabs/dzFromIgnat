@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
+import {v1} from "uuid";
 import './App.css';
+import {AffairsType, ChangeFilterType, FilterValueType, RemoveAffairType} from "./ts/types";
+import Demo from "./components/common/Demo";
 import MyName from "./components/myName/MyName"
 import Message from "./components/message/Message"
 import MyAffairs from "./components/myAffairs/MyAffairs";
-import {AffairsType, ChangeFilterType, FilterValueType, RemoveAffairType} from "./types";
-import {v1} from "uuid";
 import HelloName from "./components/helloName/HelloName";
+
+
 
 function App() {
 
@@ -50,6 +53,8 @@ function App() {
             <MyName surname={fullName.surname}
                     name={fullName.name}
                     patronymic={fullName.patronymic}/>
+
+            <Demo/>
 
             <HelloName/>
 

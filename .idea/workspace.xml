@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de04933b-91fd-49f5-a299-240d53ce0986" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dzFromIgnat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Checkbox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Demo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/commonStyle.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/commonStyle.module.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/commonStyle.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/helloName/HelloName.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/helloName/HelloName.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/myAffairs/MyAffairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myAffairs/MyAffairs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +51,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="E:\react-lessons\dzIgnat\dzFromIgnat\node_modules\typescript\lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\react-lessons\dzIgnat\dzFromIgnat\src\ts" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -54,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593263356412</updated>
-      <workItem from="1593263359282" duration="2163000" />
+      <workItem from="1593263359282" duration="12854000" />
     </task>
     <servers />
   </component>
@@ -66,9 +90,17 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1593264828678" />
+    <state x="317" y="148" key="EditFileWatcherDialog" timestamp="1593266644155">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="317" y="148" key="EditFileWatcherDialog/0.0.1366.738@0.0.1366.738" timestamp="1593266644155" />
     <state x="397" y="161" key="git4idea.merge.GitPullDialog" timestamp="1593263495638">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="397" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1593263495638" />
+    <state x="339" y="167" key="run.anything.popup" timestamp="1593270170999">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="167" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1593270170999" />
   </component>
 </project>

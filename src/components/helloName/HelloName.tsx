@@ -1,8 +1,10 @@
-import React, {ChangeEvent, KeyboardEvent, useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import {v1} from "uuid";
 
 import style from "./HelloName.module.scss"
 import sendIcon from "../../assets/img/send.png"
+import Button from "../common/Button";
+import Input from "../common/Input";
 
 type PropsHellowNameType = {}
 
@@ -14,15 +16,11 @@ function HelloName(props: PropsHellowNameType) {
 
     let [inputName, setInputName] = useState<InputNameType>('');
     let [names, setNames] = useState<NamesType>([]);
+    let [errorInput, setErrorInput] = useState<boolean>(false)
 
     const onChangeInputName = (e: ChangeEvent<HTMLInputElement>) => {
+        setErrorInput(false);
         setInputName(e.currentTarget.value);
-    };
-
-    const onKeyPressInputName = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.charCode === 13) {
-            onClickBtnAdd();
-        }
     };
 
     const onClickBtnAdd = () => {
@@ -31,6 +29,8 @@ function HelloName(props: PropsHellowNameType) {
             alert(`Hello ${newName.name}`);
             setNames(prev => [newName, ...prev]);
             setInputName('');
+        } else {
+            setErrorInput(true)
         }
     };
 
@@ -38,14 +38,15 @@ function HelloName(props: PropsHellowNameType) {
         <div className={style.helloName}>
             <h2>dz : 3</h2>
             <div className={style.helloNameField}>
-                <input type="text"
+                <Input type="text"
                        value={inputName}
                        onChange={onChangeInputName}
                        title={'Enter name'}
-                       onKeyPress={onKeyPressInputName}/>
-                <button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
+                       error={errorInput}
+                       onEnter={onClickBtnAdd}/>
+                <Button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
                     <img src={sendIcon} alt="bin"/>
-                </button>
+                </Button>
             </div>
             <span>Names amount : {names.length}</span>
         </div>
