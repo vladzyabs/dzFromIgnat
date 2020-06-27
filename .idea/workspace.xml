@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de04933b-91fd-49f5-a299-240d53ce0986" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/ButtonNya.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/InputNya.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/common.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/common.module.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/common.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/helloName/HelloName.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/helloName/HelloName.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/myAffairs/MyAffairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myAffairs/MyAffairs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593263356412</updated>
-      <workItem from="1593263359282" duration="1860000" />
+      <workItem from="1593263359282" duration="2163000" />
     </task>
     <servers />
   </component>
