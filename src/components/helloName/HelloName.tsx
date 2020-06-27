@@ -1,7 +1,5 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 import {v1} from "uuid";
-import Button from "../common/ButtonNya";
-import Input from "../common/InputNya";
 
 import style from "./HelloName.module.scss"
 import sendIcon from "../../assets/img/send.png"
@@ -16,14 +14,16 @@ function HelloName(props: PropsHellowNameType) {
 
     let [inputName, setInputName] = useState<InputNameType>('');
     let [names, setNames] = useState<NamesType>([]);
-    let [emptyField, setEmptyField] = useState<boolean>(false);
 
     const onChangeInputName = (e: ChangeEvent<HTMLInputElement>) => {
         setInputName(e.currentTarget.value);
-        setEmptyField(false)
     };
 
-    const onKeyPressInputName = () => onClickBtnAdd();
+    const onKeyPressInputName = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.charCode === 13) {
+            onClickBtnAdd();
+        }
+    };
 
     const onClickBtnAdd = () => {
         if (inputName.trim()) {
@@ -31,8 +31,6 @@ function HelloName(props: PropsHellowNameType) {
             alert(`Hello ${newName.name}`);
             setNames(prev => [newName, ...prev]);
             setInputName('');
-        } else {
-            setEmptyField(true)
         }
     };
 
@@ -40,15 +38,14 @@ function HelloName(props: PropsHellowNameType) {
         <div className={style.helloName}>
             <h2>dz : 3</h2>
             <div className={style.helloNameField}>
-                <Input type="text"
+                <input type="text"
                        value={inputName}
                        onChange={onChangeInputName}
                        title={'Enter name'}
-                       error={emptyField ? 'You did not enter a name' : ''}
-                       onEnter={() => onKeyPressInputName()}/>
-                <Button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
+                       onKeyPress={onKeyPressInputName}/>
+                <button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
                     <img src={sendIcon} alt="bin"/>
-                </Button>
+                </button>
             </div>
             <span>Names amount : {names.length}</span>
         </div>

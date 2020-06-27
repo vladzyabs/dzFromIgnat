@@ -1,6 +1,5 @@
 import React from "react";
 import {AffairsType, ChangeFilterType, RemoveAffairType} from "../../types";
-import Button from "../common/ButtonNya";
 
 import style from "./MyAffairs.module.scss"
 import binIcon from "../../assets/img/bin.png"
@@ -21,9 +20,9 @@ function MyAffairs(props: PropsMyAffairsType) {
             <li key={affair.id} className={style.affair}>
                 <span>{affair.title}</span>
                 <span>{affair.priority}</span>
-                <Button onClick={ onClickRemove }>
+                <button onClick={ onClickRemove }>
                     <img src={binIcon} alt="bin icon"/>
-                </Button>
+                </button>
             </li>
         )
     } );
@@ -37,10 +36,10 @@ function MyAffairs(props: PropsMyAffairsType) {
             </ul>
 
             <div className={style.sortingBtns}>
-                <Button onClick={ () => {props.changeFilter("all")} }>all</Button>
-                <Button onClick={ () => {props.changeFilter("low")} }>low</Button>
-                <Button onClick={ () => {props.changeFilter("medium")} }>medium</Button>
-                <Button onClick={ () => {props.changeFilter("high")} }>high</Button>
+                <button onClick={ () => {props.changeFilter("all")} }>all</button>
+                <button onClick={ () => {props.changeFilter("low")} }>low</button>
+                <button onClick={ () => {props.changeFilter("medium")} }>medium</button>
+                <button onClick={ () => {props.changeFilter("high")} }>high</button>
             </div>
 
         </div>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de04933b-91fd-49f5-a299-240d53ce0986" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ButtonNya.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/InputNya.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/common.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/common.module.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/common.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/helloName/HelloName.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/helloName/HelloName.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/myAffairs/MyAffairs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myAffairs/MyAffairs.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1du7vnXldyIp3jTpZXXPGjPR3vS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../it-incubator" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="E:\react-lessons\dzIgnat\dzFromIgnat\node_modules\typescript\lib" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de04933b-91fd-49f5-a299-240d53ce0986" name="Default Changelist" comment="" />
+      <created>1593263356412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593263356412</updated>
+      <workItem from="1593263359282" duration="1860000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593264828678">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1593264828678" />
+    <state x="397" y="161" key="git4idea.merge.GitPullDialog" timestamp="1593263495638">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="397" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1593263495638" />
+  </component>
+</project>
