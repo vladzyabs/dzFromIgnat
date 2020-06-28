@@ -20,7 +20,7 @@ function Input(props: PropsInputType) {
         }
     };
 
-    const Change = (e: ChangeEvent<HTMLInputElement>) => {
+    const change = (e: ChangeEvent<HTMLInputElement>) => {
         if(setError && e.currentTarget.value.trim()) {
             setError(false)
         }
@@ -31,7 +31,7 @@ function Input(props: PropsInputType) {
     return <input className={classes}
                   type="text" {...otherProps}
                   onKeyPress={pressEnter}
-                  onChange={Change}/>
+                  onChange={change}/>
 }
 
 export default Input
