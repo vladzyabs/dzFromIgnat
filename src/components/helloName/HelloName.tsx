@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {useState} from "react";
 import {v1} from "uuid";
 
 import style from "./HelloName.module.scss"
@@ -16,20 +16,17 @@ function HelloName(props: PropsHellowNameType) {
 
     let [inputName, setInputName] = useState<InputNameType>('');
     let [names, setNames] = useState<NamesType>([]);
-    let [errorInput, setErrorInput] = useState<boolean>(false)
-
-    const onChangeInputName = (e: ChangeEvent<HTMLInputElement>) => {
-        setErrorInput(false);
-        setInputName(e.currentTarget.value);
-    };
+    let [errorInput, setErrorInput] = useState<boolean>(false);
 
     const onClickBtnAdd = () => {
         if (inputName.trim()) {
             let newName = {id: v1(), name: inputName.trim()};
             alert(`Hello ${newName.name}`);
+            setErrorInput(false);
             setNames(prev => [newName, ...prev]);
             setInputName('');
-        } else {
+        }
+        else {
             setErrorInput(true)
         }
     };
@@ -40,9 +37,9 @@ function HelloName(props: PropsHellowNameType) {
             <div className={style.helloNameField}>
                 <Input type="text"
                        value={inputName}
-                       onChange={onChangeInputName}
-                       title={'Enter name'}
+                       propsOnChange={setInputName}
                        error={errorInput}
+                       setError={setErrorInput}
                        onEnter={onClickBtnAdd}/>
                 <Button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
                     <img src={sendIcon} alt="bin"/>

@@ -7,7 +7,7 @@ type PropsButtonType =
 
 function Button(props: PropsButtonType) {
     const {red, ...othetProps} = props
-    const classes = props.red ? `${style.button} ${style.typeRed}` : `${style.button}`;
+    const classes = red ? `${style.button} ${style.typeRed}` : `${style.button}`;
     return <button className={classes} {...othetProps} />
 }
 
