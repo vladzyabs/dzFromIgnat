@@ -21,7 +21,7 @@ function MyAffairs(props: PropsMyAffairsType) {
             <li key={affair.id} className={style.affair}>
                 <span>{affair.title}</span>
                 <span>{affair.priority}</span>
-                <Button onClick={ onClickRemove } typeRed={true}>
+                <Button onClick={ onClickRemove } red={true}>
                     <img src={binIcon} alt="bin icon"/>
                 </Button>
             </li>

@@ -10,7 +10,7 @@ function Demo() {
         <div className={style.demo}>
             <h2>dz : 4</h2>
             <Button>Button</Button>
-            <Input value={'Input'}/>
+            <Input/>
             <Checkbox/>
         </div>
     )

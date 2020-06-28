@@ -10,6 +10,8 @@ type PropsInputType =
 
 function Input(props: PropsInputType) {
 
+    const {error, onEnter, ...otherProps} = props
+
     const pressEnter = (e: KeyboardEvent<HTMLInputElement>) => {
         if(e.charCode === 13) {
             props.onEnter && props.onEnter()
@@ -17,7 +19,7 @@ function Input(props: PropsInputType) {
     };
 
     const classes = props.error ? `${style.input} ${style.error}` : `${style.input}`;
-    return <input className={classes} type="text" {...props} onKeyPress={pressEnter}/>
+    return <input className={classes} type="text" {...otherProps} onKeyPress={pressEnter}/>
 }
 
 export default Input
