@@ -1,0 +1,91 @@
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background: #A4BDBA;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.4s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  transform-origin: 0 0;
+  transition-timing-function: ease-in;
+}
+.navbar .navIcon {
+  cursor: pointer;
+}
+.navbar .iconLine {
+  width: 15px;
+  height: 2px;
+  background: #000;
+  margin-bottom: 2px;
+  border-radius: 1px;
+}
+.navbar .iconLine:last-child {
+  margin: 0;
+}
+.navbar .nav {
+  z-index: -1;
+  min-width: 200px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 10px 40px;
+  border-radius: 25px;
+  background: #A4BDBA;
+  transform-origin: 10px 0;
+  transform: scale(0);
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  transition: 0.3s;
+}
+.navbar:hover {
+  box-shadow: 0px 0px 20px calc(100vmax + 100vmax) rgba(0, 0, 0, 0.5);
+}
+.navbar:hover .nav {
+  opacity: 1;
+  transform: scale(1);
+}
+.navbar .link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.navbar .link:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition-timing-function: ease-in-out;
+  transition: 0.3s;
+}
+.navbar .link:hover:before {
+  transform: scaleX(1);
+}
+.navbar .link.activeLink {
+  cursor: default;
+}
+.navbar .link.activeLink:before {
+  transform: scaleX(1);
+}
+
+/*# sourceMappingURL=Navbar.module.css.map */
