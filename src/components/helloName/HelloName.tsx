@@ -1,10 +1,10 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {useState} from "react";
 import {v1} from "uuid";
-import Button from "../common/ButtonNya";
-import Input from "../common/InputNya";
 
 import style from "./HelloName.module.scss"
 import sendIcon from "../../assets/img/send.png"
+import Button from "../common/Button";
+import Input from "../common/Input";
 
 type PropsHellowNameType = {}
 
@@ -16,23 +16,18 @@ function HelloName(props: PropsHellowNameType) {
 
     let [inputName, setInputName] = useState<InputNameType>('');
     let [names, setNames] = useState<NamesType>([]);
-    let [emptyField, setEmptyField] = useState<boolean>(false);
-
-    const onChangeInputName = (e: ChangeEvent<HTMLInputElement>) => {
-        setInputName(e.currentTarget.value);
-        setEmptyField(false)
-    };
-
-    const onKeyPressInputName = () => onClickBtnAdd();
+    let [errorInput, setErrorInput] = useState<boolean>(false);
 
     const onClickBtnAdd = () => {
         if (inputName.trim()) {
             let newName = {id: v1(), name: inputName.trim()};
             alert(`Hello ${newName.name}`);
+            setErrorInput(false);
             setNames(prev => [newName, ...prev]);
             setInputName('');
-        } else {
-            setEmptyField(true)
+        }
+        else {
+            setErrorInput(true)
         }
     };
 
@@ -42,10 +37,10 @@ function HelloName(props: PropsHellowNameType) {
             <div className={style.helloNameField}>
                 <Input type="text"
                        value={inputName}
-                       onChange={onChangeInputName}
-                       title={'Enter name'}
-                       error={emptyField ? 'You did not enter a name' : ''}
-                       onEnter={() => onKeyPressInputName()}/>
+                       propsOnChange={setInputName}
+                       error={errorInput}
+                       setError={setErrorInput}
+                       onEnter={onClickBtnAdd}/>
                 <Button onClick={onClickBtnAdd} disabled={!inputName.trim()}>
                     <img src={sendIcon} alt="bin"/>
                 </Button>

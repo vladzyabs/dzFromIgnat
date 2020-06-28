@@ -1,9 +1,9 @@
 import React from "react";
-import {AffairsType, ChangeFilterType, RemoveAffairType} from "../../types";
-import Button from "../common/ButtonNya";
+import {AffairsType, ChangeFilterType, RemoveAffairType} from "../../ts/types";
 
 import style from "./MyAffairs.module.scss"
 import binIcon from "../../assets/img/bin.png"
+import Button from "../common/Button";
 
 type PropsMyAffairsType = {
     affairs: AffairsType,
@@ -21,7 +21,7 @@ function MyAffairs(props: PropsMyAffairsType) {
             <li key={affair.id} className={style.affair}>
                 <span>{affair.title}</span>
                 <span>{affair.priority}</span>
-                <Button onClick={ onClickRemove }>
+                <Button onClick={ onClickRemove } red={true}>
                     <img src={binIcon} alt="bin icon"/>
                 </Button>
             </li>
