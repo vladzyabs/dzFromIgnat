@@ -17,12 +17,12 @@ function Checkbox(props: PropsCheckboxType) {
 
     return (
         <div className={style.checkboxWrapper}>
-            <input id="checkbox"
+            <input id={otherProps.id}
                    className={style.checkbox}
                    type="checkbox"
                    onChange={change}
                    {...otherProps}/>
-            <label htmlFor="checkbox"></label>
+            <label htmlFor={otherProps.id}></label>
         </div>
     )
 }
