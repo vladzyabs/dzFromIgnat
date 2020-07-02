@@ -29,9 +29,10 @@ function Input(props: PropsInputType) {
 
     const classes = error ? `${style.input} ${style.error}` : `${style.input}`;
     return <input className={classes}
-                  type="text" {...otherProps}
+                  type="text"
                   onKeyPress={pressEnter}
-                  onChange={change}/>
+                  onChange={change}
+                  {...otherProps}/>
 }
 
 export default Input

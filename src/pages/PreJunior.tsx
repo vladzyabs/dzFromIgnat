@@ -47,6 +47,8 @@ function PreJunior() {
     return (
         <div className='App'>
 
+            <h1>Pre Junior</h1>
+
             <MyName surname={fullName.surname}
                     name={fullName.name}
                     patronymic={fullName.patronymic}/>

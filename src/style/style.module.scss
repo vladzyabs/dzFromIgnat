@@ -1,0 +1,8 @@
+@import "mixins";
+
+.demoEditSpan {
+  @extend %box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

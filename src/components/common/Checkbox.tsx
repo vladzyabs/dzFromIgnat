@@ -4,8 +4,9 @@ import style from "./commonStyle.module.scss"
 type PropsCheckboxType =
     DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
     & {
-        propsOnChange?: (checked: boolean) => void
-    }
+    id: string
+    propsOnChange: (checked: boolean) => void
+}
 
 function Checkbox(props: PropsCheckboxType) {
 
