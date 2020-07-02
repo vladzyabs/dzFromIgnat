@@ -45,7 +45,7 @@ function PreJunior() {
     const changeFilter: ChangeFilterType = (value) => setFilter(value);
 
     return (
-        <div className='App'>
+        <div className='page'>
 
             <h1>Pre Junior</h1>
 

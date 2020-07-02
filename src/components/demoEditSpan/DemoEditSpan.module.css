@@ -1,0 +1,22 @@
+.demoEditSpan {
+  background-color: #A4BDBA;
+  max-width: 400px;
+  min-width: 230px;
+  padding: 15px;
+  border-radius: 25px 25px 25px 25px;
+  margin-bottom: 100px;
+}
+
+.demoEditSpan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.demoEditSpan span, .demoEditSpan input {
+  margin-bottom: 5px;
+}
+.demoEditSpan > div button:first-child {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=DemoEditSpan.module.css.map */
