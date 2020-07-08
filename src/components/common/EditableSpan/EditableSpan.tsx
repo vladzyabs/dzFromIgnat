@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import Input from "./Input";
+import Input from "../Input/Input";
 
-import style from "./commonStyle.module.scss"
+import style from "./EditableSpan.module.scss"
 
 type PropsEditableSpanType = {
     value: string

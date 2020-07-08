@@ -1,0 +1,11 @@
+.editSpan {
+  display: block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px  ;
+  padding: 3px 10px;
+  transition: 0.3s;
+  &:hover {
+    background: rgba(#fff, 0.7);
+  }
+}

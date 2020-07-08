@@ -1,5 +1,5 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from "react";
-import style from "./commonStyle.module.scss"
+import style from "./Checkbox.module.scss"
 
 type PropsCheckboxType =
     DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -10,7 +10,7 @@ type PropsCheckboxType =
 
 function Checkbox(props: PropsCheckboxType) {
 
-    const {propsOnChange, ...otherProps} = props;
+    const {propsOnChange, ...restProps} = props;
 
     const change = (e: ChangeEvent<HTMLInputElement>) => {
         propsOnChange && propsOnChange(e.currentTarget.checked);
@@ -18,12 +18,12 @@ function Checkbox(props: PropsCheckboxType) {
 
     return (
         <div className={style.checkboxWrapper}>
-            <input id={otherProps.id}
+            <input id={restProps.id}
                    className={style.checkbox}
                    type="checkbox"
                    onChange={change}
-                   {...otherProps}/>
-            <label htmlFor={otherProps.id}></label>
+                   {...restProps}/>
+            <label htmlFor={restProps.id}></label>
         </div>
     )
 }

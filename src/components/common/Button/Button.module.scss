@@ -1,0 +1,46 @@
+.button {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 15px;
+  border: 2px solid #73827f;
+  border-radius: 3px;
+  background: transparent;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  z-index: 100;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .4);
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      transform: scale(1);
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    color: #666;
+
+    &:after {
+      transform: scaleX(0);
+    }
+  }
+
+  &.typeRed {
+    background: rgba(158, 4, 0, 0.6);
+  }
+}

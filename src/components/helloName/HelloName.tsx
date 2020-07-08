@@ -3,8 +3,8 @@ import {v1} from "uuid";
 
 import style from "./HelloName.module.scss"
 import sendIcon from "../../assets/img/send.png"
-import Button from "../common/Button";
-import Input from "../common/Input";
+import Button from "../common/Button/Button";
+import Input from "../common/Input/Input";
 
 type PropsHellowNameType = {}
 

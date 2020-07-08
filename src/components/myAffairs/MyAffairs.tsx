@@ -3,7 +3,7 @@ import {AffairsType, ChangeFilterType, RemoveAffairType} from "../../ts/types";
 
 import style from "./MyAffairs.module.scss"
 import binIcon from "../../assets/img/bin.png"
-import Button from "../common/Button";
+import Button from "../common/Button/Button";
 
 type PropsMyAffairsType = {
     affairs: AffairsType,

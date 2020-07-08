@@ -1,5 +1,5 @@
 import React, {KeyboardEvent, DetailedHTMLProps, InputHTMLAttributes, ChangeEvent} from "react";
-import style from "./commonStyle.module.scss"
+import style from "./Input.module.scss"
 
 type PropsInputType =
     DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -12,7 +12,7 @@ type PropsInputType =
 
 function Input(props: PropsInputType) {
 
-    const {error, onEnter, propsOnChange, setError, ...otherProps} = props;
+    const {error, onEnter, propsOnChange, setError, ...restProps} = props;
 
     const pressEnter = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.charCode === 13) {
@@ -20,19 +20,23 @@ function Input(props: PropsInputType) {
         }
     };
 
-    const change = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         if(setError && e.currentTarget.value.trim()) {
             setError(false)
         }
         propsOnChange && propsOnChange(e.currentTarget.value);
     };
 
+    const onBlur = () => setError && setError(false);
+
     const classes = error ? `${style.input} ${style.error}` : `${style.input}`;
+
     return <input className={classes}
                   type="text"
                   onKeyPress={pressEnter}
-                  onChange={change}
-                  {...otherProps}/>
+                  onChange={onChange}
+                  onBlur={onBlur}
+                  {...restProps}/>
 }
 
 export default Input

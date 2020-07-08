@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import Button from "./Button";
-import Input from "./Input";
-import Checkbox from "./Checkbox";
+import Button from "./Button/Button";
+import Input from "./Input/Input";
+import Checkbox from "./Checkbox/Checkbox";
 
 import style from "./commonStyle.module.scss"
 

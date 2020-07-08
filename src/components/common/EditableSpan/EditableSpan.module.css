@@ -1,0 +1,13 @@
+.editSpan {
+  display: block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 3px 10px;
+  transition: 0.3s;
+}
+.editSpan:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/*# sourceMappingURL=EditableSpan.module.css.map */
