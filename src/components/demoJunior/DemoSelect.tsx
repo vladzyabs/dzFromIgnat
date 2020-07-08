@@ -5,12 +5,12 @@ import Select from "../common/Select/Select";
 function DemoSelect() {
 
     const selectValue = ['1 option', '2 option', '3 option'];
-    const selectItem = (item: string) => alert(item)
+    const onSelectItem = (item: string) => alert(item)
 
     return (
         <div className={style.demoEditSpan}>
             <h3>dz : 7</h3>
-            <Select value={selectValue} onChangee={selectItem}/>
+            <Select selectValue={selectValue} placeholderOption={'Demo select'} onSelectChange={onSelectItem}/>
         </div>
     )
 }

@@ -4,22 +4,23 @@ import './Select.module.scss'
 type PropsSelectType =
     DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
     & {
-    value: string[]
-    onChangee: (i: string) => void
+    selectValue: string[]
+    placeholderOption?: string
+    onSelectChange: (i: string) => void
 }
 
 function Select(props: PropsSelectType) {
 
-    const {value, onChangee, ...restProps} = props;
+    const {selectValue, placeholderOption, onSelectChange, ...restProps} = props;
 
-    const change = (e: ChangeEvent<HTMLSelectElement>) => onChangee(e.currentTarget.value)
+    const change = (e: ChangeEvent<HTMLSelectElement>) => onSelectChange(e.currentTarget.value);
 
     return (
         <div data-include="form-input-select()">
             <select required onChange={change} {...restProps}>
-                <option value="" hidden>Example Placeholder</option>
+                {placeholderOption && <option value="" hidden>{placeholderOption}</option>}
                 {
-                    value.map((item, index) => <option key={index} value={item}>{item}</option>)
+                    selectValue.map((item, index) => <option key={index} value={item}>{item}</option>)
                 }
             </select>
         </div>
