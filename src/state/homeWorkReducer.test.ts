@@ -1,4 +1,4 @@
-import {checkPeopleByAge, hwReducer, PeronType, sortPeopleAC} from "./homeWorkReducer";
+import {checkPeopleByAgeAC, hwReducer, PeronType, sortPeopleAC} from "./homeWorkReducer";
 import {v1} from "uuid";
 
 let initialState: PeronType[]
@@ -34,6 +34,6 @@ test('array of people should be sorted down', () => {
 })
 
 test('many people must be older 18 age', () => {
-    const sortState = hwReducer(initialState, checkPeopleByAge(18))
+    const sortState = hwReducer(initialState, checkPeopleByAgeAC(18))
     expect(sortState.find(person => person.age < 18)).toBe(undefined)
 })

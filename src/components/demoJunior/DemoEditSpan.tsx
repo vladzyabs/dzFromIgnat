@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import style from "./DemoEditSpan.module.scss";
+import style from "./Demo.module.scss";
 import EditableSpan from "../common/EditableSpan/EditableSpan";
 import Button from "../common/Button/Button";
 import {restoreState, saveState} from "../../utils/utils";

@@ -1,0 +1,6 @@
+.people ul > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=People.module.css.map */
