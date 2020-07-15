@@ -25,6 +25,7 @@ function Radio(props: PropsRadioType) {
                            className={style.radioInput}
                            type="radio"
                            name={radioName}
+                           checked={item === props.value}
                            onChange={() => onRadioChange(item)}
                            {...restProps}/>
                     <label htmlFor={id}>{item}</label>
