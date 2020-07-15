@@ -17,7 +17,7 @@ function People(props: PropsPeopleType) {
             <ul>
                 {
                     props.people.map(person => {
-                        return <li>
+                        return <li key={person.id}>
                             <span>Name: {person.name}</span><span>Age: {person.age}</span>
                         </li>
                     })
