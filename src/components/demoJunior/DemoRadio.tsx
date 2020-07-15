@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./DemoEditSpan.module.scss";
+import style from "./Demo.module.scss";
 import Radio from "../common/Radio/Radio";
 
 function DemoSelect() {
