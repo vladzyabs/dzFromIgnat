@@ -2,19 +2,21 @@ import React, {useState} from "react";
 import style from "./Demo.module.scss";
 import People from "../People/People";
 import {v1} from "uuid";
-import {checkPeopleByAgeAC, hwReducer, PeronType, sortPeopleAC} from "../../state/homeWorkReducer";
+import {checkPeopleByAgeAC, hwReducer, StateType, sortPeopleAC} from "../../state/homeWorkReducer";
 
 function DemoPeople() {
 
-    const initialState = [
+    const initialState = {
+        people: [
         {id: v1(), name: 'Dasha', age: 24},
         {id: v1(), name: 'Andrey', age: 14},
         {id: v1(), name: 'Elena', age: 18},
         {id: v1(), name: 'Sasha', age: 21},
         {id: v1(), name: 'Boris', age: 30},
         {id: v1(), name: 'Masha', age: 17},
-    ]
-    const [people, setPeople] = useState<PeronType[]>(initialState)
+    ]}
+
+    const [people, setPeople] = useState<StateType>(initialState)
 
     const sortUp = () => {
         setPeople(hwReducer(people, sortPeopleAC("up")))
