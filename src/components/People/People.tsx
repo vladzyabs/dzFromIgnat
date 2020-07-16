@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./People.module.scss"
-import {PeronType} from "../../state/homeWorkReducer";
+import {StateType} from "../../state/homeWorkReducer";
 import Button from "../common/Button/Button";
 
 type PropsPeopleType = {
-    people: PeronType[]
+    people: StateType
     showAll?: () => void
     sortUp: () => void
     sortDown: () => void
@@ -16,7 +16,7 @@ function People(props: PropsPeopleType) {
         <div className={style.people}>
             <ul>
                 {
-                    props.people.map(person => {
+                    props.people.people.map(person => {
                         return <li key={person.id}>
                             <span>Name: {person.name}</span><span>Age: {person.age}</span>
                         </li>

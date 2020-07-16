@@ -4,16 +4,29 @@ export type PeronType = {
     age: number
 }
 
-export const hwReducer = (state: PeronType[], action: ActionType): PeronType[] => {
+export type StateType = {
+    people: PeronType[]
+}
+
+export const hwReducer = (state: StateType, action: ActionType): StateType => {
     switch (action.type) {
         case 'SORT_PEOPLE':
             if (action.payload === 'up') {
-                return [...state.sort((a, b) => a.name > b.name ? 1 : -1)]
+                return {
+                    ...state,
+                    people: [...state.people.sort((a, b) => a.name > b.name ? 1 : -1)]
+                }
             } else {
-                return [...state.sort((a, b) => a.name < b.name ? 1 : -1)]
+                return {
+                    ...state,
+                    people: [...state.people.sort((a, b) => a.name < b.name ? 1 : -1)]
+                }
             }
         case "CHECK_PEOPLE":
-            return state.filter(person => person.age >= action.payload)
+            return {
+                ...state,
+                people: state.people.filter(person => person.age >= action.payload)
+            }
         default :
             return state
     }
