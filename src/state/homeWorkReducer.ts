@@ -14,12 +14,22 @@ export const hwReducer = (state: StateType, action: ActionType): StateType => {
             if (action.payload === 'up') {
                 return {
                     ...state,
-                    people: [...state.people.sort((a, b) => a.name > b.name ? 1 : -1)]
+                    people: [...state.people.sort((a, b) => {
+                        if (a.name > b.name) {return 1}
+                        else if (a.name === b.name) {return 0}
+                        else {return -1}
+                    })
+                    ]
                 }
             } else {
                 return {
                     ...state,
-                    people: [...state.people.sort((a, b) => a.name < b.name ? 1 : -1)]
+                    people: [...state.people.sort((a, b) => {
+                        if (a.name < b.name) {return 1}
+                        else if (a.name === b.name) {return 0}
+                        else {return -1}
+                    })
+                    ]
                 }
             }
         case "CHECK_PEOPLE":
