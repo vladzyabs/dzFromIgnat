@@ -16,8 +16,8 @@ export const hwReducer = (state: StateType, action: ActionType): StateType => {
                     ...state,
                     people: [...state.people.sort((a, b) => {
                         if (a.name > b.name) {return 1}
-                        else if (a.name === b.name) {return 0}
-                        else {return -1}
+                        if (a.name < b.name) {return -1}
+                        return -1
                     })
                     ]
                 }
@@ -26,8 +26,8 @@ export const hwReducer = (state: StateType, action: ActionType): StateType => {
                     ...state,
                     people: [...state.people.sort((a, b) => {
                         if (a.name < b.name) {return 1}
-                        else if (a.name === b.name) {return 0}
-                        else {return -1}
+                        if (a.name > b.name) {return -1}
+                        return 0
                     })
                     ]
                 }
