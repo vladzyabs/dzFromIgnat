@@ -1,33 +1,35 @@
 import React, {useState} from "react";
 import moment from "moment";
-import style from "./Demo.module.scss";
+import style from "./Time.module.scss";
+import Button from "../common/Button/Button";
 
-function Time() {
+function Time(props: {}) {
 
     const [time, setTime] = useState(moment().format('h:mm:ss'))
-    const [date, setDate] = useState(moment().format('D MMMM YYYY'))
-    const [timerId, setTimerId] = useState<any>(moment())
-
+    const date = moment().format('D MMMM YYYY')
+    const [timerId, setTimerId] = useState()
 
     const runTime = () => {
-        clearInterval(timerId);
+        timerId && clearInterval(timerId);
         const timer_id = setInterval(() => setTime(moment().format('h:mm:ss')), 1000)
         setTimerId(timer_id)
     }
 
     const stopTime = () => {
-        clearInterval(timerId)
+        timerId && clearInterval(timerId)
     }
 
     return (
-        <div className={style.demoEditSpan}>
+        <div className={style.wrapper}>
             <h3>dz : 9</h3>
             <div className={style.time}>
                 current time: <span>{time}</span>
                 <div className={style.date}>date: <span>{date}</span></div>
             </div>
-            <button onClick={() => runTime()}>run</button>
-            <button onClick={() => {stopTime()}}>stop</button>
+            <div className={style.control}>
+                <Button onClick={() => runTime()}>run</Button>
+                <Button onClick={() => {stopTime()}}>stop</Button>
+            </div>
         </div>
     )
 }

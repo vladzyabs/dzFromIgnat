@@ -1,4 +1,4 @@
-.time .date, .time, .demoEditSpan {
+.demoEditSpan {
   background-color: #A4BDBA;
   max-width: 400px;
   min-width: 230px;
@@ -17,32 +17,6 @@
 }
 .demoEditSpan > div button:first-child {
   margin-right: 10px;
-}
-
-.time {
-  position: relative;
-  margin: 0;
-  margin-bottom: 10px;
-  border: 1px solid #609aff;
-}
-.time .date {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  background: #A4BDBA;
-  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  transform-origin: center;
-  transform: translateX(-50%) translateY(-100%);
-  opacity: 0;
-}
-.time:hover {
-  transition-delay: 0.3s;
-  border: 1px solid transparent;
-}
-.time:hover .date {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
 }
 
 /*# sourceMappingURL=Demo.module.css.map */
