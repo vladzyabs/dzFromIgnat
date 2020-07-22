@@ -3,7 +3,7 @@ import DemoEditSpan from "../components/demoJunior/DemoEditSpan";
 import DemoSelect from "../components/demoJunior/DemoSelect";
 import DemoRadio from "../components/demoJunior/DemoRadio";
 import DemoPeople from "../components/demoJunior/DemoPeople";
-import Time from "../components/demoJunior/DemoTime";
+import Time from "../components/Time/Time";
 
 function Junior() {
 
