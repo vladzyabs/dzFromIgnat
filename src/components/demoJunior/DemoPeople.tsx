@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import style from "./Demo.module.scss";
 import People from "../People/People";
 import {v1} from "uuid";
-import {checkPeopleByAgeAC, hwReducer, StateType, sortPeopleAC} from "../../state/homeWorkReducer";
+import {checkPeopleByAgeAC, hwReducer, StateType, sortPeopleAC} from "../../store/homeWorkReducer";
 
 function DemoPeople() {
 
