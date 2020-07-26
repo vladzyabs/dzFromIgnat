@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./People.module.scss"
-import {StateType} from "../../state/homeWorkReducer";
+import {StateType} from "../../store/homeWorkReducer";
 import Button from "../common/Button/Button";
 
 type PropsPeopleType = {
